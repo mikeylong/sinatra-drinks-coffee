@@ -1,9 +1,12 @@
 require 'sinatra'
+require 'haml'
+
 set :server, 'thin'
+
 connections = []
 
 get '/' do
-  halt erb(:login) unless params[:user]
+  halt haml(:login) unless params[:user]
   erb :chat, :locals => { :user => params[:user].gsub(/\W/, '') }
 end
 
@@ -22,21 +25,14 @@ end
 __END__
 
 @@ layout
-<html>
-  <head>
-    <title>Super Simple Chat with Sinatra</title>
-    <meta charset="utf-8" />
-    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js"></script>
-  </head>
-  <body><%= yield %></body>
-</html>
-
-@@ login
-<form action='/'>
-  <label for='user'>User Name:</label>
-  <input name='user' value='' />
-  <input type='submit' value="GO!" />
-</form>
+%html
+  %head
+    %title
+      Super Simple Chat with Sinatra
+    %meta{charset: "utf-8"}
+    %script{src: "http://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js"}
+  %body
+    = yield
 
 @@ chat
 <pre id='chat'></pre>
