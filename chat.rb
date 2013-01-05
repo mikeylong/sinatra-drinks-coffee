@@ -1,6 +1,10 @@
 require 'sinatra'
 require 'haml'
+require 'coffee-script'
 require 'thin'
+
+require "sinatra/reloader" if development?
+# use Rack::LiveReload
 
 set :server, 'thin'
 
@@ -21,4 +25,8 @@ end
 post '/' do
   connections.each { |out| out << "data: #{params[:msg]}\n\n" }
   204 # response without entity body
+end
+
+get '/chat.js' do
+  coffee :chat
 end
