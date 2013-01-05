@@ -1,5 +1,6 @@
 require 'sinatra'
 require 'haml'
+require 'thin'
 
 set :server, 'thin'
 
@@ -31,5 +32,6 @@ __END__
       Super Simple Chat with Sinatra
     %meta{charset: "utf-8"}
     %script{src: "http://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js"}
+    %script{src: "javascript/chat.js"}
   %body
     = yield
