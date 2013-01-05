@@ -22,16 +22,3 @@ post '/' do
   connections.each { |out| out << "data: #{params[:msg]}\n\n" }
   204 # response without entity body
 end
-
-__END__
-
-@@ layout
-%html
-  %head
-    %title
-      Super Simple Chat with Sinatra
-    %meta{charset: "utf-8"}
-    %script{src: "http://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js"}
-    %script{src: "javascript/chat.js"}
-  %body
-    = yield
