@@ -1,12 +1,8 @@
 require 'sinatra'
+require "sinatra/reloader" if development?
 require 'haml'
 require 'coffee-script'
 require 'thin'
-
-if ENV['RACK_ENV'] == 'development'
-  require "sinatra/reloader"
-  # use Rack::LiveReload
-end
 
 set :server, 'thin'
 
@@ -29,6 +25,6 @@ post '/' do
   204 # response without entity body
 end
 
-# get '/chat.js' do
-#   coffee :chat
-# end
+get '/chat.js' do
+  coffee :chat
+end
