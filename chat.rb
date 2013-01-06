@@ -25,6 +25,6 @@ post '/' do
   204 # response without entity body
 end
 
-# get '/chat.js' do
-#   coffee :chat
-# end
+get '/chat.js' do
+  coffee :chat
+end
