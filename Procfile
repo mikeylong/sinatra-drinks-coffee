@@ -1,2 +1,2 @@
-web: bundle exec ruby chat.rb -p $PORT
-livereload: bundle exec guard
+web: bundle exec ruby app.rb -p $PORT
+guard: bundle exec guard

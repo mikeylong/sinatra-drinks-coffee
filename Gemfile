@@ -5,11 +5,9 @@ gem 'thin'
 gem 'haml'
 gem 'coffee-script'
 gem 'therubyracer'
+gem 'compass'
 
 group :development do
-  gem 'guard-livereload'
-  gem 'rb-readline'
+  gem 'guard-coffeescript'
   gem 'rb-inotify'
-  gem 'rack-livereload'
-  gem 'sinatra-reloader'
 end

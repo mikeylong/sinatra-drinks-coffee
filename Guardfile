@@ -1,4 +1,1 @@
-guard 'livereload' do
-  watch(%r{.+\.rb})
-  watch(%r{views/.+\.(haml|scss|sass|coffee)})
-end
+guard 'coffeescript', :input => 'app/assets/javascripts', :output => 'public/javascripts'

@@ -4,10 +4,10 @@
     %title
       Super Simple Chat with Sinatra
     %meta{charset: "utf-8"}
-    / %link{rel: 'stylesheet', href: "css/screen.css"}
-    %script{src: "http://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js"}
-  %body.chat
+    %link{rel: 'stylesheet', href: "stylesheets/screen.css"}
+  %body
 
     = yield
 
-    %script{src: "chat.js"}
+    %script{src: "http://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js"}
+    %script{src: "javascripts/chat.js"}

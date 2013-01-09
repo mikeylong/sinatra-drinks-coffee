@@ -1,8 +1,6 @@
 jQuery ->
   if $('.chat').length > 0 && $('.chat .name').attr('data-person').length > 0
-  
-    console.log( "Hello, " + $('.chat .name').attr("data-person") + "!" )
-  
+
     es = new EventSource('/stream')
     es.onmessage = (e) -> $('#conversation').append(e.data + "\n")
 

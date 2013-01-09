@@ -1,10 +1,3 @@
-require 'sinatra'
-require 'haml'
-require 'coffee-script'
-require 'thin'
-
-set :server, 'thin'
-
 connections = []
 
 get '/' do
@@ -24,10 +17,6 @@ post '/' do
   204 # response without entity body
 end
 
-get '/chat.js' do
-  coffee :chat
+get '/stylesheets/screen.css' do
+  sass :'stylesheets/screen'
 end
-
-# get '/screen.css' do
-#   sass :screen
-# end
