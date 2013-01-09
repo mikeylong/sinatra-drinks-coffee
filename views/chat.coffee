@@ -1,14 +1,15 @@
-$ ->
+jQuery ->
+  if $('.chat').length > 0 && $('.chat .name').attr('data-person').length > 0
   
-  console.log( "Hello, " + $('.user_name').attr("user") + "!" )
+    console.log( "Hello, " + $('.chat .name').attr("data-person") + "!" )
   
-  es = new EventSource('/stream')
-  es.onmessage = (e) -> $('#chat').append(e.data + "\n")
+    es = new EventSource('/stream')
+    es.onmessage = (e) -> $('#conversation').append(e.data + "\n")
 
-  $("form").live 'submit', (e) ->
-    $.post('/', {msg: $('.user_name').attr("user") + ": " + $('#msg').val()})
+    $("form").live 'submit', (e) ->
+      $.post('/', {msg: $('.chat .name').attr("data-person") + ": " + $('#msg').val()})
 
-    $('#msg').val('')
-    $('#msg').focus()
+      $('#msg').val('')
+      $('#msg').focus()
 
-    e.preventDefault()
+      e.preventDefault()

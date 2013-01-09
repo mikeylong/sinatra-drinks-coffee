@@ -8,8 +8,8 @@ set :server, 'thin'
 connections = []
 
 get '/' do
-  halt haml(:login) unless params[:user]
-  haml :chat, :locals => { :user => params[:user].gsub(/\W/, '') }
+  halt haml(:login) unless params[:person]
+  haml :chat, :locals => { :person => params[:person].gsub(/\W/, '') }
 end
 
 get '/stream', :provides => 'text/event-stream' do

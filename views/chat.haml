@@ -1,8 +1,8 @@
-%pre#chat
+.chat
 
-%form
-  %input#msg{:placeholder => "type message here..."}
+  %pre#conversation
 
-.user_name{:user => "#{user}"}
+  %form
+    %input#msg{:placeholder => "type message here..."}
 
-%script{src: "chat.js"}
+  .name{:'data-person' => "#{person}"}
