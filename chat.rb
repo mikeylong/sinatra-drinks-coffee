@@ -1,12 +1,9 @@
 require 'sinatra'
-require 'sinatra/streaming'
-require 'sinatra/reloader' if development?
 require 'haml'
 require 'coffee-script'
 require 'thin'
 
 set :server, 'thin'
-helpers Sinatra::Streaming
 
 connections = []
 
@@ -30,3 +27,7 @@ end
 get '/chat.js' do
   coffee :chat
 end
+
+# get '/screen.css' do
+#   sass :screen
+# end
