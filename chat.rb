@@ -1,10 +1,12 @@
 require 'sinatra'
-require "sinatra/reloader" if development?
+require 'sinatra/streaming'
+require 'sinatra/reloader' if development?
 require 'haml'
 require 'coffee-script'
 require 'thin'
 
 set :server, 'thin'
+helpers Sinatra::Streaming
 
 connections = []
 
