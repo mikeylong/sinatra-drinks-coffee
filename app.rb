@@ -1,7 +1,7 @@
 require 'sinatra'
 require 'thin'
 require 'haml'
-require 'coffee-script'
+require 'coffee-script' if development?
 require 'compass'
 
 $LOAD_PATH.unshift("#{File.dirname(__FILE__)}/app")
