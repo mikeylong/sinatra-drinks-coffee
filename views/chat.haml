@@ -1,11 +1,6 @@
-%h4
-  Sinatra Drinks Coffee
-
 .chat
 
-  %pre#conversation
+  %form.horizontal
+    %input#msg{type: 'text', placeholder: "type message here..."}
 
-  %form
-    %input#msg{:placeholder => "type message here..."}
-
-  .name{:'data-person' => "#{person}"}
+    %pre#conversation{:'data-person' => "#{person}"}

@@ -1,1 +1,7 @@
-.chat {}
+.chat {
+  #conversation {
+    color: $dark-grey;
+    padding: $base-font-size * 2;
+    font-size: $base-font-size * $golden;
+  }
+}

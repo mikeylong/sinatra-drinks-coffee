@@ -66,8 +66,8 @@ article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, 
 /* line 1, ../../app/assets/stylesheets/_layout.scss */
 .container {
   *zoom: 1;
-  max-width: 59em;
-  _width: 59em;
+  max-width: 39em;
+  _width: 39em;
   padding-left: 1em;
   padding-right: 1em;
   margin-left: auto;
@@ -83,36 +83,84 @@ article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, 
 /* line 2, ../../app/assets/stylesheets/_typography.scss */
 h1, h2, h3 {
   font-weight: bold;
+  color: #eeeeee;
 }
 
-/* line 5, ../../app/assets/stylesheets/_typography.scss */
+/* line 6, ../../app/assets/stylesheets/_typography.scss */
 h1 {
   font-size: 41.88678px;
+  padding-top: 16px;
 }
 
-/* line 9, ../../app/assets/stylesheets/_typography.scss */
+/* line 11, ../../app/assets/stylesheets/_typography.scss */
 h2 {
   font-size: 25.888px;
 }
 
-/* line 13, ../../app/assets/stylesheets/_typography.scss */
+/* line 15, ../../app/assets/stylesheets/_typography.scss */
 h3 {
   font-size: 16px;
 }
 
-/* line 17, ../../app/assets/stylesheets/_typography.scss */
+/* line 19, ../../app/assets/stylesheets/_typography.scss */
 h4 {
   text-transform: uppercase;
   font-size: 16px;
 }
 
-/* line 23, ../../app/assets/stylesheets/_typography.scss */
+/* line 25, ../../app/assets/stylesheets/_typography.scss */
 label {
+  font-size: 25.888px;
   text-transform: capitalize;
 }
 
+/* line 30, ../../app/assets/stylesheets/_typography.scss */
+input {
+  font-size: 16px;
+}
+
 /* line 1, ../../app/assets/stylesheets/_forms.scss */
-input[type=submit] {
+form {
+  background: #d1cab5;
+  margin-top: 32px;
+  padding-top: 25.888px;
+  padding-bottom: 25.888px;
+  padding-left: 25.888px;
+  padding-right: 25.888px;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  -ms-border-radius: 5px;
+  -o-border-radius: 5px;
+  border-radius: 5px;
+}
+/* line 12, ../../app/assets/stylesheets/_forms.scss */
+form.horizontal {
+  display: block;
+}
+/* line 15, ../../app/assets/stylesheets/_forms.scss */
+form.horizontal input[type=text] {
+  display: block;
+  width: 96%;
+}
+/* line 23, ../../app/assets/stylesheets/_forms.scss */
+form.vertical label, form.vertical input[type=submit] {
+  display: block;
+}
+/* line 27, ../../app/assets/stylesheets/_forms.scss */
+form.vertical input[type=submit] {
+  margin-top: 8px;
+}
+/* line 31, ../../app/assets/stylesheets/_forms.scss */
+form.vertical input[type=text] {
+  width: 40%;
+  min-width: 300px;
+}
+/* line 37, ../../app/assets/stylesheets/_forms.scss */
+form label {
+  color: #444444;
+}
+/* line 41, ../../app/assets/stylesheets/_forms.scss */
+form input[type=submit] {
   -webkit-border-radius: 5px;
   -moz-border-radius: 5px;
   -ms-border-radius: 5px;
@@ -122,44 +170,34 @@ input[type=submit] {
   padding-bottom: 8px;
   padding-right: 16px;
   padding-left: 16px;
-  font-size: 16px;
-  border: 2px solid #d1cab5;
-  background-image: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #eeeeee), color-stop(100%, #444444));
-  background-image: -webkit-linear-gradient(#eeeeee, #444444);
-  background-image: -moz-linear-gradient(#eeeeee, #444444);
-  background-image: -o-linear-gradient(#eeeeee, #444444);
-  background-image: linear-gradient(#eeeeee, #444444);
+  border: 0;
+  background-image: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #4d2e2e), color-stop(100%, #111111));
+  background-image: -webkit-linear-gradient(#4d2e2e, #111111);
+  background-image: -moz-linear-gradient(#4d2e2e, #111111);
+  background-image: -o-linear-gradient(#4d2e2e, #111111);
+  background-image: linear-gradient(#4d2e2e, #111111);
   color: #f1f1f1;
   text-shadow: 0px -1px 1px rgba(17, 17, 17, 0.8);
   cursor: pointer;
 }
-/* line 13, ../../app/assets/stylesheets/_forms.scss */
-input[type=submit]:hover {
-  border: 2px solid #eeeeee;
-  background-image: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #f1f1f1), color-stop(100%, #444444));
-  background-image: -webkit-linear-gradient(#f1f1f1, #444444);
-  background-image: -moz-linear-gradient(#f1f1f1, #444444);
-  background-image: -o-linear-gradient(#f1f1f1, #444444);
-  background-image: linear-gradient(#f1f1f1, #444444);
-}
-
-/* line 19, ../../app/assets/stylesheets/_forms.scss */
-input {
+/* line 54, ../../app/assets/stylesheets/_forms.scss */
+form input[type=text] {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-right: 8px;
   padding-left: 8px;
-  font-size: 16px;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  -ms-border-radius: 5px;
+  -o-border-radius: 5px;
+  border-radius: 5px;
+  border: 1px solid #4d2e2e;
+  color: #111111;
+  background: #f1f1f1;
 }
-
-/* line 27, ../../app/assets/stylesheets/_forms.scss */
-label {
-  font-size: 25.888px;
-}
-
-/* line 32, ../../app/assets/stylesheets/_forms.scss */
-form.vertical label {
-  display: block;
+/* line 64, ../../app/assets/stylesheets/_forms.scss */
+form input[type=text]:focus {
+  border: 1px solid #4d2e2e;
 }
 
 /* line 1, ../../app/assets/stylesheets/_window.scss */
@@ -168,6 +206,13 @@ body {
   background: #4d2e2e;
   color: #d1cab5;
   font-size: 16px;
+}
+
+/* line 2, ../../app/assets/stylesheets/_chat.scss */
+.chat #conversation {
+  color: #444444;
+  padding: 32px;
+  font-size: 25.888px;
 }
 
 /* line 1, ../../app/assets/stylesheets/_login.scss */

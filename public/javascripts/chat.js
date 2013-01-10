@@ -2,14 +2,15 @@
 
   jQuery(function() {
     var es;
-    if ($('.chat').length > 0 && $('.chat .name').attr('data-person').length > 0) {
+    if ($('.chat').length > 0 && $('#conversation').attr('data-person').length > 0) {
+      $('#msg').focus();
       es = new EventSource('/stream');
       es.onmessage = function(e) {
-        return $('#conversation').append(e.data + "\n");
+        return $('#conversation').prepend(e.data + "\n");
       };
       return $("form").live('submit', function(e) {
         $.post('/', {
-          msg: $('.chat .name').attr("data-person") + ": " + $('#msg').val()
+          msg: $('#conversation').attr("data-person") + ": " + $('#msg').val()
         });
         $('#msg').val('');
         $('#msg').focus();
