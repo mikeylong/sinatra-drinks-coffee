@@ -7,3 +7,17 @@ $grid-padding   : $gutter-width;  // grid-padding equal to gutters
 // typography
 $base-font-size : 16px;
 $golden         : 1.618;
+
+// colors
+$theme-dark         : rgb(77,46,46);
+$theme-light        : rgb(209,202,181);
+$default-text-color : $theme-light;
+$dark-grey          : #444;
+$light-grey         : #eee;
+$black              : #111;
+$white              : #f1f1f1;
+
+// effects
+$default-text-shadow-color: rgba($black, 0.8);
+$default-text-shadow-blur: 1px;
+$default-text-shadow-v-offset: -1px;

@@ -1,6 +1,6 @@
 body {
   font-family: "Helvetica Neue", "Arial", "Sans-Serif";
-  background: #444;
-  color: #bcd;
+  background: $theme-dark;
+  color: $default-text-color;
   font-size: $base-font-size;
 }

@@ -1,0 +1,35 @@
+input[type=submit] {
+  @include border-radius(5px);
+  padding-top: $base-font-size/2;
+  padding-bottom: $base-font-size/2;
+  padding-right: $base-font-size;
+  padding-left: $base-font-size;
+  font-size: $base-font-size;
+  border: 2px solid $theme-light;
+  @include background-image(linear-gradient($light-grey, $dark-grey));
+  color: $white;
+  @include single-text-shadow;
+  cursor: pointer;
+  &:hover {
+    border: 2px solid $light-grey;
+    @include background-image(linear-gradient($white, $dark-grey));
+  }
+}
+
+input {
+  padding-top: $base-font-size/2;
+  padding-bottom: $base-font-size/2;
+  padding-right: $base-font-size/2;
+  padding-left: $base-font-size/2;
+  font-size: $base-font-size;
+}
+
+label {
+  font-size: $base-font-size * $golden;
+}
+
+form.vertical {
+  label {
+    display: block;
+  }
+}
