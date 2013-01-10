@@ -25,6 +25,9 @@ GEM
     guard-coffeescript (1.2.1)
       coffee-script (>= 2.2.0)
       guard (>= 1.1.0)
+    guard-compass (0.0.6)
+      compass (>= 0.10.5)
+      guard (>= 0.2.1)
     haml (3.1.7)
     libv8 (3.11.8.9)
     listen (0.7.1)
@@ -66,6 +69,7 @@ PLATFORMS
 DEPENDENCIES
   coffee-script
   guard-coffeescript
+  guard-compass
   haml
   rb-inotify
   sinatra
