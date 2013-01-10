@@ -1,0 +1,19 @@
+h1, h2, h3 {
+  font-weight: bold;
+}
+h1 {
+  font-size: $base-font-size * $golden * $golden;
+}
+
+h2 {
+  font-size: $base-font-size * $golden;
+}
+
+h3 {
+  font-size: $base-font-size;
+}
+
+h4 {
+  text-transform: uppercase;
+  font-size: $base-font-size;
+}

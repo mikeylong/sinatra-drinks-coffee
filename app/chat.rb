@@ -16,7 +16,3 @@ post '/' do
   connections.each { |out| out << "data: #{params[:msg]}\n\n" }
   204 # response without entity body
 end
-
-get '/stylesheets/screen.css' do
-  sass :'stylesheets/screen'
-end
