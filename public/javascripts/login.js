@@ -1,7 +1,7 @@
 (function() {
 
   jQuery(function() {
-    return $('#person_name').focus();
+    return $('#name').focus();
   });
 
 }).call(this);

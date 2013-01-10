@@ -4,7 +4,7 @@ jQuery ->
     $('#msg').focus()
 
     es = new EventSource('/stream')
-    es.onmessage = (e) -> $('#conversation').prepend(e.data + "\n")
+    es.onmessage = (e) -> $('#conversation').prepend(e.data + "<br><br>")
 
     $("form").live 'submit', (e) ->
       $.post('/', {msg: $('#conversation').attr("data-person") + ": " + $('#msg').val()})

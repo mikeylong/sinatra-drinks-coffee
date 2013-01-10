@@ -6,7 +6,7 @@
       $('#msg').focus();
       es = new EventSource('/stream');
       es.onmessage = function(e) {
-        return $('#conversation').prepend(e.data + "\n");
+        return $('#conversation').prepend(e.data + "<br><br>");
       };
       return $("form").live('submit', function(e) {
         $.post('/', {

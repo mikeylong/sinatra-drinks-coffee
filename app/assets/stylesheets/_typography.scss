@@ -1,15 +1,29 @@
 // headers
 h1, h2, h3 {
   font-weight: bold;
-  color: $light-grey;
+
+  & a {
+    color: $light-grey;
+    text-decoration: none;
+  }
 }
+
 h1 {
+  color: $light-grey;
   font-size: $base-font-size * $golden * $golden;
   padding-top: $base-font-size;
 }
 
+h2, h3 {
+  color: $theme-light;
+}
+
 h2 {
   font-size: $base-font-size * $golden;
+
+  &.inline {
+    display: inline-block;
+  }
 }
 
 h3 {
@@ -21,6 +35,11 @@ h4 {
   font-size: $base-font-size;
 }
 
+// links
+a {
+  color: $white;
+}
+
 // forms
 label {
   font-size: $base-font-size * $golden;
@@ -29,4 +48,10 @@ label {
 
 input {
   font-size: $base-font-size;
+}
+
+// white space
+pre {
+  white-space: pre-wrap;
+  @include force-wrap;
 }

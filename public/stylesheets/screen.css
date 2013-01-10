@@ -83,40 +83,72 @@ article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, 
 /* line 2, ../../app/assets/stylesheets/_typography.scss */
 h1, h2, h3 {
   font-weight: bold;
+}
+/* line 5, ../../app/assets/stylesheets/_typography.scss */
+h1 a, h2 a, h3 a {
   color: #eeeeee;
+  text-decoration: none;
 }
 
-/* line 6, ../../app/assets/stylesheets/_typography.scss */
+/* line 11, ../../app/assets/stylesheets/_typography.scss */
 h1 {
+  color: #eeeeee;
   font-size: 41.88678px;
   padding-top: 16px;
 }
 
-/* line 11, ../../app/assets/stylesheets/_typography.scss */
+/* line 17, ../../app/assets/stylesheets/_typography.scss */
+h2, h3 {
+  color: #d1cab5;
+}
+
+/* line 21, ../../app/assets/stylesheets/_typography.scss */
 h2 {
   font-size: 25.888px;
 }
+/* line 24, ../../app/assets/stylesheets/_typography.scss */
+h2.inline {
+  display: inline-block;
+}
 
-/* line 15, ../../app/assets/stylesheets/_typography.scss */
+/* line 29, ../../app/assets/stylesheets/_typography.scss */
 h3 {
   font-size: 16px;
 }
 
-/* line 19, ../../app/assets/stylesheets/_typography.scss */
+/* line 33, ../../app/assets/stylesheets/_typography.scss */
 h4 {
   text-transform: uppercase;
   font-size: 16px;
 }
 
-/* line 25, ../../app/assets/stylesheets/_typography.scss */
+/* line 39, ../../app/assets/stylesheets/_typography.scss */
+a {
+  color: #f1f1f1;
+}
+
+/* line 44, ../../app/assets/stylesheets/_typography.scss */
 label {
   font-size: 25.888px;
   text-transform: capitalize;
 }
 
-/* line 30, ../../app/assets/stylesheets/_typography.scss */
+/* line 49, ../../app/assets/stylesheets/_typography.scss */
 input {
   font-size: 16px;
+}
+
+/* line 54, ../../app/assets/stylesheets/_typography.scss */
+pre {
+  white-space: pre-wrap;
+  white-space: pre;
+  white-space: pre-wrap;
+  white-space: pre-line;
+  white-space: -pre-wrap;
+  white-space: -o-pre-wrap;
+  white-space: -moz-pre-wrap;
+  white-space: -hp-pre-wrap;
+  word-wrap: break-word;
 }
 
 /* line 1, ../../app/assets/stylesheets/_forms.scss */
@@ -204,10 +236,15 @@ form input[type=text]:focus {
 body {
   font-family: "Helvetica Neue", "Arial", "Sans-Serif";
   background: #4d2e2e;
+  background-image: url('/images/coffeescript-logo-device.png?1357847600');
   color: #d1cab5;
   font-size: 16px;
 }
 
+/* line 1, ../../app/assets/stylesheets/_chat.scss */
+.chat {
+  padding-bottom: 8px;
+}
 /* line 2, ../../app/assets/stylesheets/_chat.scss */
 .chat #conversation {
   color: #444444;

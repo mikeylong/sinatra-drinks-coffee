@@ -1,2 +1,2 @@
 jQuery ->
-  $('#person_name').focus()
+  $('#name').focus()

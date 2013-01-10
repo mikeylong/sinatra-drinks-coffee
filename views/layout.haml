@@ -2,7 +2,7 @@
 %html
   %head
     %title
-      Super Simple Chat with Sinatra
+      Sinatra Drinks Coffee
     %meta{charset: "utf-8"}
     %link{rel: 'stylesheet', href: "stylesheets/screen.css"}
   %body
@@ -10,7 +10,14 @@
     .container
 
       %h1
-        Sinatra Drinks Coffee
+        %a{href: '/'}
+          = 'Sinatra Drinks Coffee'
+      %h2.inline
+        = 'Simple Chat App |'
+      = 'github'
+      %a{href: 'https://github.com/mblongii/sinatra-drinks-coffee.git'}= "repo"
+      = ' - blog'
+      %a{href: 'http://mblongii.com/sinatra-drinks-coffee'}= "article"
 
       = yield
 
