@@ -8,7 +8,7 @@
       es.onmessage = function(e) {
         return $('#conversation').prepend(e.data + "<br><br>");
       };
-      return $("form").live('submit', function(e) {
+      return $("form").on('submit', function(e) {
         $.post('/', {
           msg: $('#conversation').attr("data-person") + ": " + $('#msg').val()
         });
