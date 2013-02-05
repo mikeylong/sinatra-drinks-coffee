@@ -10,5 +10,5 @@ group :development do
   gem 'guard-coffeescript'
   gem 'susy'
   gem 'guard-compass'
-  gem 'rb-inotify'
+  gem 'rb-inotify', '~> 0.8.8'
 end
