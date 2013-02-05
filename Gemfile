@@ -10,5 +10,5 @@ group :development do
   gem 'guard-coffeescript'
   gem 'susy'
   gem 'guard-compass'
-  gem 'rb-inotify'
+  gem 'rb-notify'
 end
