@@ -2,8 +2,7 @@ require 'sinatra'
 require 'thin'
 require 'haml'
 
-$LOAD_PATH.unshift("#{File.dirname(__FILE__)}/app")
-Dir.glob("#{File.dirname(__FILE__)}/app/*.rb") { |app| require File.basename(app, '.*') }
+Dir[File.dirname(__FILE__) + '/app/*.rb'].each {|file| require file }
 
 configure do
   set :haml, { :format => :html5 }

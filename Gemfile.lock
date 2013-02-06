@@ -71,7 +71,7 @@ DEPENDENCIES
   guard-coffeescript
   guard-compass
   haml
-  rb-inotify
+  rb-inotify (~> 0.8.8)
   sinatra
   susy
   therubyracer
